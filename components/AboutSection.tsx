@@ -1,57 +1,105 @@
 'use client';
 const G='#007744',B='#0055aa',O='#cc4400';
-// text palette
-const T1='#0a0a12'; // primary
-const T2='#2e2e42'; // body
-const T3='#606070'; // muted labels
-const T4='#909098'; // dim labels
+const T1='#08080f',T2='#1a1a2c',T3='#555568';
+
+const glass = {
+  background:'rgba(255,255,255,0.82)',
+  backdropFilter:'blur(20px)',
+  WebkitBackdropFilter:'blur(20px)',
+  border:'1px solid rgba(255,255,255,0.92)',
+  boxShadow:'0 8px 32px rgba(0,0,40,0.08),0 2px 8px rgba(0,0,0,0.04)',
+  borderRadius:'14px',
+} as const;
+
 const DATA=[
-  {label:'FULL NAME',value:'Naitik Gupta'},{label:'STATUS',value:'M.Sc. Chemistry · Sem III'},
-  {label:'INSTITUTION',value:'VNIT Nagpur'},{label:'SPECIALTY',value:'Organic Synthesis · Catalysis'},
-  {label:'ORCID / PUB',value:'Angew. Chem. 2026'},{label:'EMAIL',value:'naitikgupta976@gmail.com'},
-  {label:'PHONE',value:'+91-7007401684'},{label:'LOCATION',value:'Nagpur, Maharashtra'},
+  {label:'FULL NAME',   value:'Naitik Gupta'},
+  {label:'STATUS',      value:'M.Sc. Chemistry 2nd Year'},
+  {label:'INSTITUTION', value:'VNIT Nagpur'},
+  {label:'LOCATION',    value:'Nagpur, Maharashtra 440010'},
+  {label:'PHONE',       value:'+91-7007401684'},
+  {label:'EMAIL',       value:'naitikgupta976@gmail.com'},
+  {label:'INST. EMAIL', value:'ms24chm016@students.vnit.ac.in'},
+  {label:'PUBLICATION', value:'Angew. Chem. Int. Ed. 2026'},
 ];
+
 export default function AboutSection() {
   return (
-    <section id="about" style={{background:'#f0efeb',padding:'7rem 3rem',position:'relative',overflow:'hidden'}}>
-      <div style={{position:'absolute',inset:0,backgroundImage:'linear-gradient(rgba(0,0,0,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,0.04) 1px,transparent 1px)',backgroundSize:'44px 44px',pointerEvents:'none'}}/>
-      <div style={{position:'absolute',right:'-60px',top:'50%',transform:'translateY(-50%)',fontSize:'28rem',fontWeight:900,fontFamily:'monospace',color:'rgba(0,0,0,0.03)',lineHeight:1,pointerEvents:'none',userSelect:'none'}}>C</div>
+    <section id="about" style={{background:'linear-gradient(135deg,#f0efea 0%,#eaeaf5 55%,#edf3ea 100%)',padding:'7rem 3rem',position:'relative',overflow:'hidden'}}>
+      <div style={{position:'absolute',inset:0,backgroundImage:'linear-gradient(rgba(0,0,80,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,80,0.03) 1px,transparent 1px)',backgroundSize:'44px 44px',pointerEvents:'none'}}/>
+      <div style={{position:'absolute',right:'-40px',top:'50%',transform:'translateY(-50%)',fontSize:'26rem',fontWeight:900,fontFamily:'monospace',color:'rgba(0,0,80,0.025)',lineHeight:1,pointerEvents:'none',userSelect:'none'}}>C</div>
+
       <div style={{maxWidth:'1380px',margin:'0 auto',position:'relative',zIndex:2}}>
-        <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:G,marginBottom:'0.5rem'}}>// SECTION 02</div>
-        <h2 style={{fontFamily:'"Arial Black",sans-serif',fontSize:'clamp(2.5rem,6vw,5rem)',fontWeight:900,textTransform:'uppercase',letterSpacing:'-2px',lineHeight:0.9,color:'#0e0e14',marginBottom:'4rem'}}>
-          ABOUT<br/><span style={{WebkitTextStroke:'2px rgba(0,119,68,0.7)',color:'transparent'}}>THE SCIENTIST</span>
+        <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:G,marginBottom:'0.5rem',fontWeight:700}}>// SECTION 02</div>
+        <h2 style={{fontFamily:'"Arial Black",sans-serif',fontSize:'clamp(2.5rem,6vw,5rem)',fontWeight:900,textTransform:'uppercase',letterSpacing:'-2px',lineHeight:0.9,color:T1,marginBottom:'4rem'}}>
+          ABOUT<br/><span style={{WebkitTextStroke:'2.5px rgba(0,119,68,0.8)',color:'transparent'}}>THE SCIENTIST</span>
         </h2>
-        <div style={{display:'grid',gridTemplateColumns:'1fr 1.2fr',gap:'5rem',alignItems:'start'}}>
-          <div>
-            <div style={{border:'1px solid rgba(0,0,0,0.1)',borderRadius:'4px',overflow:'hidden',background:'#fff'}}>
-              <div style={{background:'rgba(0,119,68,0.06)',borderBottom:'1px solid rgba(0,0,0,0.07)',padding:'12px 20px',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-                <span style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'3px',color:G,fontWeight:700}}>SPECIMEN RECORD</span>
-                <span style={{fontFamily:'monospace',fontSize:'10px',color:T3}}>REF-NG-2024</span>
-              </div>
-              {DATA.map((d,i)=>(
-                <div key={i} style={{display:'grid',gridTemplateColumns:'40% 60%',borderBottom:'1px solid rgba(0,0,0,0.06)',padding:'13px 20px',background:i%2===0?'transparent':'rgba(0,0,0,0.02)'}}>
-                  <span style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'2px',color:T3,fontWeight:600}}>{d.label}</span>
-                  <span style={{fontFamily:'monospace',fontSize:'12px',color:T1,fontWeight:500}}>{d.value}</span>
-                </div>
-              ))}
+
+        <div style={{display:'grid',gridTemplateColumns:'1fr 1.3fr',gap:'4rem',alignItems:'start'}}>
+          {/* Specimen card */}
+          <div style={{...glass,overflow:'hidden'}}>
+            <div style={{background:`linear-gradient(90deg,${G}18,${B}10)`,borderBottom:'1px solid rgba(255,255,255,0.6)',padding:'14px 22px',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+              <span style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'3px',color:G,fontWeight:700}}>SPECIMEN RECORD</span>
+              <span style={{fontFamily:'monospace',fontSize:'10px',color:T3}}>REF-NG-2024</span>
             </div>
+            {DATA.map((d,i)=>(
+              <div key={i} style={{display:'grid',gridTemplateColumns:'42% 58%',borderBottom:'1px solid rgba(0,0,0,0.05)',padding:'13px 22px',background:i%2===0?'rgba(255,255,255,0.3)':'rgba(255,255,255,0.6)'}}>
+                <span style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'2px',color:T3,fontWeight:600}}>{d.label}</span>
+                <span style={{fontFamily:'monospace',fontSize:'12px',color:T1,fontWeight:600}}>{d.value}</span>
+              </div>
+            ))}
           </div>
-          <div>
-            <p style={{fontSize:'17px',lineHeight:1.9,color:T2,fontFamily:'Georgia,serif',marginBottom:'2.5rem'}}>
-              I'm a chemistry researcher specializing in <span style={{color:B,fontWeight:600}}>C–H bond functionalization</span> and{' '}
-              <span style={{color:G,fontWeight:600}}>covalent organic framework (COF) design</span>. My work bridges homogeneous transition metal catalysis and heterogeneous materials chemistry, with publications in <em>Angewandte Chemie</em>.
-            </p>
-            <p style={{fontSize:'17px',lineHeight:1.9,color:T2,fontFamily:'Georgia,serif',marginBottom:'3rem'}}>
-              From synthesizing strained-ring redox-active compounds at <span style={{color:O,fontWeight:600}}>IIT Bhubaneswar</span> to engineering distal alkynylation at <span style={{color:O,fontWeight:600}}>IIT Bombay</span>, I thrive in environments that demand both creative problem-solving and rigorous experimental discipline.
-            </p>
-            <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:'1px',border:'1px solid rgba(0,0,0,0.1)',borderRadius:'4px',overflow:'hidden'}}>
+
+          {/* Bio + skills */}
+          <div style={{display:'flex',flexDirection:'column',gap:'2rem'}}>
+            {/* Profile */}
+            <div style={{...glass,padding:'2rem'}}>
+              <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'3px',color:G,marginBottom:'1rem',fontWeight:700}}>PROFILE</div>
+              <p style={{fontSize:'15.5px',lineHeight:1.9,color:T2,fontFamily:'Georgia,serif',marginBottom:'1.2rem'}}>
+                Driven by a passion for innovation and scientific discovery, I am actively seeking opportunities to apply my knowledge and skills in <span style={{color:B,fontWeight:700}}>organic synthesis</span> to contribute to groundbreaking research or industrial projects.
+              </p>
+              <p style={{fontSize:'15.5px',lineHeight:1.9,color:T2,fontFamily:'Georgia,serif'}}>
+                I am eager to join a dynamic team where I can continue learning and growing as a chemist while making meaningful contributions to the field — from <span style={{color:G,fontWeight:700}}>C–H bond functionalization</span> to <span style={{color:G,fontWeight:700}}>COF-based heterogeneous catalysis</span>.
+              </p>
+            </div>
+
+            {/* Skills grid */}
+            <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'1rem'}}>
+              <div style={{...glass,padding:'1.5rem'}}>
+                <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'2px',color:B,marginBottom:'0.8rem',fontWeight:700}}>COMPUTER SKILLS</div>
+                {['MS Word','MS Excel','MS PowerPoint','OriginPro','ChemDraw'].map(s=>(
+                  <div key={s} style={{display:'flex',alignItems:'center',gap:'8px',marginBottom:'5px'}}>
+                    <span style={{width:'5px',height:'5px',borderRadius:'50%',background:B,flexShrink:0,display:'inline-block'}}/>
+                    <span style={{fontFamily:'monospace',fontSize:'12px',color:T2,fontWeight:500}}>{s}</span>
+                  </div>
+                ))}
+              </div>
+              <div style={{...glass,padding:'1.5rem'}}>
+                <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'2px',color:O,marginBottom:'0.8rem',fontWeight:700}}>LANGUAGES</div>
+                {['English (Fluent)','Hindi (Native)'].map(s=>(
+                  <div key={s} style={{display:'flex',alignItems:'center',gap:'8px',marginBottom:'5px'}}>
+                    <span style={{width:'5px',height:'5px',borderRadius:'50%',background:O,flexShrink:0,display:'inline-block'}}/>
+                    <span style={{fontFamily:'monospace',fontSize:'12px',color:T2,fontWeight:500}}>{s}</span>
+                  </div>
+                ))}
+                <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'2px',color:G,marginTop:'1rem',marginBottom:'0.8rem',fontWeight:700}}>COURSEWORK</div>
+                {['Organic Synthesis','Stereoselective Synthesis','Analytical Chemistry','Spectroscopic Techniques','Physical Chemistry'].map(s=>(
+                  <div key={s} style={{display:'flex',alignItems:'center',gap:'8px',marginBottom:'5px'}}>
+                    <span style={{width:'5px',height:'5px',borderRadius:'50%',background:G,flexShrink:0,display:'inline-block'}}/>
+                    <span style={{fontFamily:'monospace',fontSize:'11px',color:T2,fontWeight:500}}>{s}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Stats */}
+            <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:'1rem'}}>
               {[
                 {n:'01',label:'Publication\nAngew. Chem.',col:G},
                 {n:'03',label:'Research\nInternships',col:B},
-                {n:'02',label:'Prestigious\nFellowships',col:O},
+                {n:'04',label:'Prestigious\nAwards',col:O},
               ].map((s,i)=>(
-                <div key={i} style={{padding:'1.5rem',background:'#fff',textAlign:'center',borderRight:i<2?'1px solid rgba(0,0,0,0.07)':'none'}}>
-                  <div style={{fontFamily:'"Arial Black",sans-serif',fontSize:'2.5rem',fontWeight:900,color:s.col,lineHeight:1}}>{s.n}</div>
+                <div key={i} style={{...glass,padding:'1.5rem',textAlign:'center'}}>
+                  <div style={{fontFamily:'"Arial Black",sans-serif',fontSize:'2.8rem',fontWeight:900,color:s.col,lineHeight:1}}>{s.n}</div>
                   <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'1px',color:T3,marginTop:'6px',whiteSpace:'pre-line',fontWeight:600}}>{s.label}</div>
                 </div>
               ))}
