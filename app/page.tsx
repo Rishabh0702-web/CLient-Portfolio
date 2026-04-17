@@ -28,7 +28,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div style={{ background: '#060610', overflowX: 'hidden' }}>
+    <div style={{ background: '#f7f6f2', overflowX: 'hidden' }}>
       <Navigation activeSection={activeSection} />
       <main>
         <HeroSection />
