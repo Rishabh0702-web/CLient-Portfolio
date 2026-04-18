@@ -95,6 +95,20 @@ export default function AboutSection() {
                 </div>
               ))}
             </div>
+
+            {/* Publication callout */}
+            <div style={{...glass,padding:'2rem',display:'grid',gridTemplateColumns:'auto 1fr',gap:'2rem',alignItems:'center'}}>
+              <div style={{fontFamily:'"Arial Black",sans-serif',fontSize:'3.5rem',fontWeight:900,color:`${G}22`,lineHeight:1,letterSpacing:'-2px'}}>PUB</div>
+              <div>
+                <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'3px',color:G,marginBottom:'6px',fontWeight:700}}>ANGEWANDTE CHEMIE INTERNATIONAL EDITION · 2026 · 65, e23983</div>
+                <p style={{fontFamily:'Georgia,serif',fontSize:'14px',color:T2,lineHeight:1.7,marginBottom:'8px'}}>
+                  <em>"Engineering Isoquinoline-derived Directing Template for Distal C5-H Functionalization of Bicyclic Aza-arenes"</em>
+                </p>
+                <div style={{fontFamily:'monospace',fontSize:'11px',color:T3,fontWeight:500}}>
+                  A. Mandal, R. Bano, S. Chattopadhyay, R. Banerjee, D. Borah, <span style={{color:G,fontWeight:700}}>N. Gupta</span>, M. Shanmugam, D. Maiti
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

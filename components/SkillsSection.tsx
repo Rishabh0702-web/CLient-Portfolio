@@ -67,7 +67,7 @@ export default function SkillsSection() {
             >
               <span style={{fontFamily:'"Arial Black",sans-serif',fontSize:'23px',fontWeight:900,color:s.col,lineHeight:1,position:'relative',zIndex:1}}>{s.pct}</span>
               <span style={{fontFamily:'monospace',fontSize:'10px',color:s.col,fontWeight:700,position:'relative',zIndex:1}}>%</span>
-              <span style={{fontFamily:'monospace',fontSize:'9px',color:T2,textAlign:'center',lineHeight:1.3,marginTop:'5px',whiteSpace:'pre-line',position:'relative',zIndex:1,fontWeight:600}}>{s.name}</span>
+              <span style={{fontFamily:'monospace',fontSize:'12px',color:T2,textAlign:'center',lineHeight:1.3,marginTop:'5px',whiteSpace:'pre-line',position:'relative',zIndex:1,fontWeight:600}}>{s.name}</span>
             </div>
           ))}
         </div>
