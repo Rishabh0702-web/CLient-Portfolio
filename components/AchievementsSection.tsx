@@ -51,7 +51,7 @@ export default function AchievementsSection() {
         </div>
 
         {/* Area of Interest */}
-        <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:B,marginBottom:'37px',fontWeight:700}}></div>
+        <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:B,marginBottom:'5px',fontWeight:700}}></div>
         <h2 style={{fontFamily:'"Arial Black",sans-serif',fontSize:'clamp(2rem,5vw,4rem)',fontWeight:900,textTransform:'uppercase',letterSpacing:'-2px',lineHeight:0.9,color:T1,marginBottom:'3rem'}}>
           AREA OF<br/><span style={{WebkitTextStroke:`2px ${B}`,color:'transparent'}}>INTEREST</span>
         </h2>
@@ -73,7 +73,7 @@ export default function AchievementsSection() {
         </div>
 
         {/* Education */}
-        <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:G,marginBottom:'0.5rem',fontWeight:700}}></div>
+        <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:G,marginBottom:'0rem',fontWeight:700}}></div>
         <h2 style={{fontFamily:'"Arial Black",sans-serif',fontSize:'clamp(2rem,5vw,4rem)',fontWeight:900,textTransform:'uppercase',letterSpacing:'-2px',lineHeight:0.9,color:T1,marginBottom:'3rem'}}>
           EDUCATION<br/><span style={{WebkitTextStroke:`2px ${B}`,color:'transparent'}}>TIMELINE</span>
         </h2>

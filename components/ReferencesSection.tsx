@@ -37,7 +37,7 @@ export default function ReferencesSection() {
     <section id="references" style={{background:'linear-gradient(135deg,#f0eeea 0%,#edf0f5 55%,#eaf4ee 100%)',padding:'0px 3rem',position:'relative',overflow:'hidden'}}>
       <div style={{position:'absolute',inset:0,backgroundImage:'linear-gradient(rgba(0,0,80,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,80,0.03) 1px,transparent 1px)',backgroundSize:'44px 44px',pointerEvents:'none'}}/>
       <div style={{maxWidth:'1380px',margin:'0 auto',position:'relative',zIndex:2}}>
-        <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:G,marginBottom:'0.5rem',fontWeight:700}}></div>
+        <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:G,marginBottom:'0rem',fontWeight:700}}></div>
         <h2 style={{fontFamily:'"Arial Black",sans-serif',fontSize:'clamp(2.5rem,6vw,5rem)',fontWeight:900,textTransform:'uppercase',letterSpacing:'-2px',lineHeight:0.9,color:T1,marginBottom:'4rem'}}>
           MENTORS &<br/><span style={{WebkitTextStroke:`2.5px ${G}`,color:'transparent'}}>REFERENCES</span>
         </h2>

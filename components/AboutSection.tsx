@@ -65,7 +65,7 @@ export default function AboutSection() {
                   </div>
                 ))}
               </div>
-              <div style={{...glass,padding:'14px 5px 15px 5px',borderRadius:'18px',border:'1px solid rgba(255,255,255,0.92)',fontStyle:'italic',paddingTop:'14px',paddingBottom:'15px',paddingLeft:'5px',paddingRight:'0px'}}>
+              <div style={{...glass,padding:'14px 5px 15px 5px',borderRadius:'55px',border:'1px solid rgba(255,255,255,0.92)',fontStyle:'italic',paddingTop:'14px',paddingBottom:'15px',paddingLeft:'5px',paddingRight:'0px'}}>
                 <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'2px',color:O,marginBottom:'0.8rem',fontWeight:700,paddingBottom:'10px'}}>LANGUAGES</div>
                 {['English (Fluent)','Hindi (Native)'].map(s=>(
                   <div key={s} style={{display:'flex',alignItems:'center',gap:'8px',marginBottom:'5px'}}>
