@@ -50,9 +50,9 @@ export default function SkillsSection() {
         <p style={{fontFamily:'monospace',fontSize:'12px',color:T3,letterSpacing:'2px',marginBottom:'4rem',fontWeight:600}}>HOVER OVER CELLS · LAB TECHNIQUES ↓</p>
 
         {/* Hex skill cells */}
-        <div style={{display:'flex',flexWrap:'wrap',gap:'8px',marginBottom:'4rem'}}>
+        <div style={{display:'flex',flexWrap:'wrap',gap:'8px',marginBottom:'4rem'}} className="section-reveal">
           {SKILLS.map((s,i)=>(
-            <div key={i}
+            <div key={i} className="scale-reveal" style={{animationDelay: `${i*0.05}s`}}
               style={{
                 clipPath:'polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)',
                 width:'120px',height:'138px',
@@ -72,9 +72,9 @@ export default function SkillsSection() {
           ))}
         </div>
 
-        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'2rem',marginBottom:'3rem'}}>
+        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'2rem',marginBottom:'3rem'}} className="section-reveal">
           {/* NMR spectrum */}
-          <div style={{...glass,padding:'1.8rem'}}>
+          <div style={{...glass,padding:'1.8rem'}} className="slide-left-reveal">
             <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'3px',color:T3,marginBottom:'1rem',fontWeight:700}}>¹H NMR PROFICIENCY SPECTRUM</div>
             <div style={{display:'flex',alignItems:'flex-end',gap:'3px',height:'56px'}}>
               {NMR_BARS.map(({h,near},i)=>(
@@ -87,7 +87,7 @@ export default function SkillsSection() {
           </div>
 
           {/* Computer skills */}
-          <div style={{...glass,padding:'1.8rem'}}>
+          <div style={{...glass,padding:'1.8rem'}} className="slide-right-reveal">
             <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'3px',color:B,marginBottom:'1.2rem',fontWeight:700}}>COMPUTER SKILLS</div>
             {COMPUTER.map((s,i)=>(
               <div key={i} style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:'10px'}}>
@@ -101,7 +101,7 @@ export default function SkillsSection() {
         </div>
 
         {/* Technical skills tags */}
-        <div style={{...glass,padding:'1.8rem'}}>
+        <div style={{...glass,padding:'1.8rem'}} className="section-reveal">
           <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'3px',color:O,marginBottom:'1.2rem',fontWeight:700}}>TECHNICAL SKILLS · LABORATORY INSTRUMENTATION</div>
           <div style={{display:'flex',flexWrap:'wrap',gap:'8px'}}>
             {['NMR Sampling','Column Chromatography','TLC','UV-Visible Spectroscopy (Shimadzu 1800)','FT-IR','TG-DTA','DSC','UV-DRS','XRD','Sonicator','Rotary Evaporator'].map(s=>(

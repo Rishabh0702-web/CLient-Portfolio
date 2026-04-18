@@ -57,9 +57,9 @@ export default function ExperienceSection() {
           WORK<br/><span style={{WebkitTextStroke:`2.5px ${O}`,color:'transparent'}}>EXPERIENCE</span>
         </h2>
 
-        <div style={{display:'flex',flexDirection:'column',gap:'1.5rem',marginBottom:'3rem'}}>
+        <div style={{display:'flex',flexDirection:'column',gap:'1.5rem',marginBottom:'3rem'}} className="section-reveal">
           {EXP.map((e,i)=>(
-            <div key={i} style={{...glass,display:'grid',gridTemplateColumns:'70px 1fr',overflow:'hidden'}}>
+            <div key={i} style={{...glass,display:'grid',gridTemplateColumns:'70px 1fr',overflow:'hidden'}} className="slide-up-reveal" style={{animationDelay: `${i*0.1}s`}}>
               <div style={{background:`linear-gradient(180deg,${e.rxnColor}18,${e.rxnColor}06)`,borderRight:'1px solid rgba(255,255,255,0.7)',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',padding:'2rem 0.5rem',gap:'12px'}}>
                 <span style={{fontFamily:'"Arial Black",sans-serif',fontSize:'2.2rem',fontWeight:900,color:e.rxnColor,opacity:0.4,lineHeight:1}}>{e.tag}</span>
                 <div style={{width:'1px',flex:1,background:`linear-gradient(${e.rxnColor}55,transparent)`}}/>
@@ -93,7 +93,7 @@ export default function ExperienceSection() {
         </div>
 
         {/* Publication callout */}
-        <div style={{...glass,padding:'2rem',display:'grid',gridTemplateColumns:'auto 1fr',gap:'2rem',alignItems:'center'}}>
+        <div style={{...glass,padding:'2rem',display:'grid',gridTemplateColumns:'auto 1fr',gap:'2rem',alignItems:'center'}} className="section-reveal">
           <div style={{fontFamily:'"Arial Black",sans-serif',fontSize:'3.5rem',fontWeight:900,color:`${G}22`,lineHeight:1,letterSpacing:'-2px'}}>PUB</div>
           <div>
             <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'3px',color:G,marginBottom:'6px',fontWeight:700}}>ANGEWANDTE CHEMIE INTERNATIONAL EDITION · 2026 · 65, e23983</div>

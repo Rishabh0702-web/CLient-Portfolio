@@ -41,10 +41,10 @@ export default function HeroSection() {
 
       {/* MAIN */}
       <div style={{maxWidth:'1380px',margin:'0 auto',padding:'0 3rem',width:'100%',zIndex:3,paddingTop:'80px'}}>
-        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'4rem',alignItems:'center',minHeight:'75vh'}}>
+        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'4rem',alignItems:'center',minHeight:'75vh'}} className="section-reveal">
 
           {/* LEFT */}
-          <div>
+          <div className="slide-left-reveal">
             <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:'#555565',marginBottom:'1.5rem',opacity:mounted?1:0,transition:'opacity 0.8s',fontWeight:600}}>
               M.SC. CHEMISTRY · VNIT NAGPUR · 2024–PRESENT
             </div>
@@ -105,7 +105,7 @@ export default function HeroSection() {
           </div>
 
           {/* RIGHT: Molecular art */}
-          <div style={{display:'flex',justifyContent:'center',alignItems:'center',position:'relative'}}>
+          <div style={{display:'flex',justifyContent:'center',alignItems:'center',position:'relative'}} className="slide-right-reveal">
             <div style={{position:'absolute',width:'440px',height:'440px',borderRadius:'50%',border:'1px solid rgba(0,100,60,0.1)',animation:'float 8s ease-in-out infinite'}}/>
             <div style={{position:'absolute',width:'360px',height:'360px',borderRadius:'50%',border:'1px dashed rgba(0,85,170,0.1)'}}/>
             <svg width="460" height="460" viewBox="0 0 500 500" style={{position:'relative',zIndex:2}}>
@@ -145,7 +145,7 @@ export default function HeroSection() {
       </div>
 
       {/* TICKER */}
-      <div style={{position:'absolute',bottom:0,left:0,right:0,overflow:'hidden',borderTop:'1px solid rgba(0,0,0,0.08)',background:'rgba(0,0,0,0.03)',padding:'10px 0',zIndex:4}}>
+      <div style={{position:'absolute',bottom:0,left:0,right:0,overflow:'hidden',borderTop:'1px solid rgba(0,0,0,0.08)',background:'rgba(0,0,0,0.03)',paddingTop:'0px',paddingBottom:'58px',zIndex:4}}>
         <div style={{display:'flex',gap:'4rem',animation:'ticker 22s linear infinite',width:'max-content',fontFamily:'monospace',fontSize:'11px',color:'#aaaabb',letterSpacing:'1px'}}>
           {[...FORMULAS,...FORMULAS].map((f,i)=>(
             <span key={i} style={{whiteSpace:'nowrap'}}>▸ {f}</span>
