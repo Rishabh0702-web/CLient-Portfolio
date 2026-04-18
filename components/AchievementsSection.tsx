@@ -18,11 +18,11 @@ const AWARDS=[
   {num:'44',symbol:'Ru',name:'IISER SHORTLIST',sub:'Shortlisted for an interview at IISER TIRUPATI for the International PhD program',year:'2024',col:G},
 ];
 const EDU=[
-  {year:'2024–NOW', degree:'M.Sc. Chemistry 2nd Yr.',inst:'VNIT Nagpur',score:'7.73 CGPA',status:'3rd SEM',col:G},
-  {year:'2020–2023',degree:'B.Sc. Life Science',inst:'Hansraj College, Univ. of Delhi',score:'8.18 CGPA',status:'COMPLETED',col:B},
-  {year:'2022–2023',degree:'10+2 Mathematics',inst:'National Inst. of Open Schooling, Delhi',score:'56.0%',status:'COMPLETED',col:O},
-  {year:'2018–2020',degree:'10+2 (CBSE)',inst:'Pt. Nagesh Dutt Public School, UP',score:'88.6%',status:'COMPLETED',col:O},
-  {year:'2016–2018',degree:'10th (CBSE)',inst:'Geeta Int. Public School, UP',score:'82.0%',status:'COMPLETED',col:O},
+  {year:'2024–NOW', degree:'M.Sc. Chemistry 2nd Yr.',inst:'VNIT Nagpur, India',score:'7.73 CGPA',status:'3rd SEM',col:G},
+  {year:'2020–2023',degree:'B.Sc. Life Science',inst:'Hansraj College, Univ. of Delhi, India',score:'8.18 CGPA',status:'COMPLETED',col:B},
+  {year:'2022–2023',degree:'10+2 Mathematics',inst:'National Inst. of Open Schooling, Delhi, India',score:'56.0%',status:'COMPLETED',col:O},
+  {year:'2018–2020',degree:'10+2 (CBSE)',inst:'Pt. Nagesh Dutt Public School, UP, India',score:'88.6%',status:'COMPLETED',col:O},
+  {year:'2016–2018',degree:'10th (CBSE)',inst:'Geeta Int. Public School, UP, India',score:'82.0%',status:'COMPLETED',col:O},
 ];
 
 export default function AchievementsSection() {
