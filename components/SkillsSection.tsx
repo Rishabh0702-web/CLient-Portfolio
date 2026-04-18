@@ -38,11 +38,11 @@ const COMPUTER=['MS Word','MS Excel','MS PowerPoint','OriginPro','ChemDraw'];
 
 export default function SkillsSection() {
   return (
-    <section id="skills" style={{background:'linear-gradient(135deg,#eef3ea 0%,#f4f3ef 60%,#eaeaf5 100%)',padding:'7rem 3rem',position:'relative',overflow:'hidden'}}>
+    <section id="skills" style={{background:'linear-gradient(135deg,#eef3ea 0%,#f4f3ef 60%,#eaeaf5 100%)',padding:'7rem 3rem 0px 3rem',position:'relative',overflow:'hidden'}}>
       <div style={{position:'absolute',inset:0,backgroundImage:'linear-gradient(rgba(0,0,80,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,80,0.03) 1px,transparent 1px)',backgroundSize:'44px 44px',pointerEvents:'none'}}/>
 
       <div style={{maxWidth:'1380px',margin:'0 auto',position:'relative',zIndex:2}}>
-        <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:G,marginBottom:'0.5rem',fontWeight:700}}>// SECTION 03</div>
+        <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:G,marginBottom:'0.5rem',fontWeight:700}}></div>
         <h2 style={{fontFamily:'"Arial Black",sans-serif',fontSize:'clamp(2.5rem,6vw,5rem)',fontWeight:900,textTransform:'uppercase',letterSpacing:'-2px',lineHeight:0.9,color:T1,marginBottom:'0.8rem'}}>
           TECHNICAL<br/>
           <span style={{WebkitTextStroke:`2.5px ${B}`,color:'transparent'}}>ARSENAL</span>
@@ -52,21 +52,9 @@ export default function SkillsSection() {
         {/* Hex skill cells */}
         <div style={{display:'flex',flexWrap:'wrap',gap:'8px',marginBottom:'4rem'}} className="section-reveal">
           {SKILLS.map((s,i)=>(
-            <div key={i} className="scale-reveal" style={{animationDelay: `${i*0.05}s`}}
-              style={{
-                clipPath:'polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)',
-                width:'120px',height:'138px',
-                background:`radial-gradient(circle at 50% 60%,rgba(255,255,255,0.95) 0%,${s.col}14 100%)`,
-                backdropFilter:'blur(12px)',WebkitBackdropFilter:'blur(12px)',
-                display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',
-                cursor:'default',transition:'transform 0.3s,filter 0.3s',position:'relative',
-                filter:'drop-shadow(0 4px 12px rgba(0,0,40,0.08))',
-              }}
-              onMouseEnter={e=>{(e.currentTarget as HTMLElement).style.transform='scale(1.13)';(e.currentTarget as HTMLElement).style.filter='drop-shadow(0 8px 24px rgba(0,0,40,0.14))';}}
-              onMouseLeave={e=>{(e.currentTarget as HTMLElement).style.transform='scale(1)';(e.currentTarget as HTMLElement).style.filter='drop-shadow(0 4px 12px rgba(0,0,40,0.08))';}}
-            >
-              <span style={{fontFamily:'"Arial Black",sans-serif',fontSize:'23px',fontWeight:900,color:s.col,lineHeight:1,position:'relative',zIndex:1}}></span>
-              <span style={{fontFamily:'monospace',fontSize:'10px',color:s.col,fontWeight:700,position:'relative',zIndex:1}}></span>
+            <div key={i} className="scale-reveal" style={{animationDelay: `${i*0.05}s`, clipPath:'polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)',width:'120px',height:'138px',background:`radial-gradient(circle at 50% 60%,rgba(255,255,255,0.95) 0%,${s.col}14 100%)`,backdropFilter:'blur(12px)',WebkitBackdropFilter:'blur(12px)',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',cursor:'default',transition:'transform 0.3s,filter 0.3s',position:'relative',filter:'drop-shadow(0 4px 12px rgba(0,0,40,0.08))'}}>
+              <span style={{fontFamily:'"Arial Black",sans-serif',fontSize:'23px',fontWeight:900,color:s.col,lineHeight:1,position:'relative',zIndex:1,display:'none'}}></span>
+              <span style={{fontFamily:'monospace',fontSize:'10px',color:s.col,fontWeight:700,position:'relative',zIndex:1,display:'none'}}></span>
               <span style={{fontFamily:'monospace',fontSize:'12px',color:T2,textAlign:'center',lineHeight:1.3,marginTop:'5px',whiteSpace:'pre-line',position:'relative',zIndex:1,fontWeight:600}}>{s.name}</span>
             </div>
           ))}
@@ -74,8 +62,8 @@ export default function SkillsSection() {
 
         <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'2rem',marginBottom:'3rem'}} className="section-reveal">
           {/* NMR spectrum */}
-          <div style={{...glass,padding:'1.8rem'}} className="slide-left-reveal">
-            <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'3px',color:T3,marginBottom:'1rem',fontWeight:700}}>¹H NMR PROFICIENCY SPECTRUM</div>
+          <div style={{...glass,padding:'1.8rem',lineHeight:'0em',paddingBottom:'0px',paddingRight:'0px'}} className="slide-left-reveal">
+            <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'3px',color:T3,marginBottom:'0rem',fontWeight:700}}></div>
             <div style={{display:'flex',alignItems:'flex-end',gap:'3px',height:'56px'}}>
               {NMR_BARS.map(({h,near},i)=>(
                 <div key={i} style={{width:'4px',height:`${h}px`,background:near?G:'rgba(0,0,0,0.12)',borderRadius:'2px 2px 0 0',boxShadow:near?`0 0 6px ${G}55`:undefined,flexShrink:0}}/>

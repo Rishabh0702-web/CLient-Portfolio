@@ -49,10 +49,10 @@ const EXP=[
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" style={{background:'linear-gradient(135deg,#f0efea 0%,#f4f0ee 50%,#f0eef4 100%)',padding:'7rem 3rem',position:'relative',overflow:'hidden'}}>
+    <section id="experience" style={{background:'linear-gradient(135deg,#f0efea 0%,#f4f0ee 50%,#f0eef4 100%)',padding:'7rem 3rem',paddingBottom:'0px',position:'relative',overflow:'hidden'}}>
       <div style={{position:'absolute',inset:0,backgroundImage:'linear-gradient(rgba(0,0,80,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,80,0.03) 1px,transparent 1px)',backgroundSize:'44px 44px',pointerEvents:'none'}}/>
       <div style={{maxWidth:'1380px',margin:'0 auto',position:'relative',zIndex:2}}>
-        <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:G,marginBottom:'0.5rem',fontWeight:700}}>// SECTION 04</div>
+        <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:G,marginBottom:'0rem',fontWeight:700}}></div>
         <h2 style={{fontFamily:'"Arial Black",sans-serif',fontSize:'clamp(2.5rem,6vw,5rem)',fontWeight:900,textTransform:'uppercase',letterSpacing:'-2px',lineHeight:0.9,color:T1,marginBottom:'4rem'}}>
           WORK<br/><span style={{WebkitTextStroke:`2.5px ${O}`,color:'transparent'}}>EXPERIENCE</span>
         </h2>
@@ -64,7 +64,7 @@ export default function ExperienceSection() {
                 <span style={{fontFamily:'"Arial Black",sans-serif',fontSize:'2.2rem',fontWeight:900,color:e.rxnColor,opacity:0.4,lineHeight:1}}>{e.tag}</span>
                 <div style={{width:'1px',flex:1,background:`linear-gradient(${e.rxnColor}55,transparent)`}}/>
               </div>
-              <div style={{padding:'2.5rem'}}>
+              <div style={{padding:'2.5rem',paddingBottom:i===EXP.length-1?'99px':'2.5rem'}}>
                 <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',flexWrap:'wrap',gap:'12px',marginBottom:'1.2rem'}}>
                   <div>
                     <span style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'3px',color:e.rxnColor,display:'block',marginBottom:'5px',fontWeight:700}}>{e.type}</span>

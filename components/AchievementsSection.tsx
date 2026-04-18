@@ -27,11 +27,11 @@ const EDU=[
 
 export default function AchievementsSection() {
   return (
-    <section id="achievements" style={{background:'linear-gradient(135deg,#eaf0f4 0%,#f4f3ef 55%,#ede8f2 100%)',padding:'7rem 3rem',position:'relative',overflow:'hidden'}}>
+    <section id="achievements" style={{background:'linear-gradient(135deg,#eaf0f4 0%,#f4f3ef 55%,#ede8f2 100%)',padding:'0px 3rem 48px 3rem',position:'relative',overflow:'hidden'}}>
       <div style={{position:'absolute',inset:0,backgroundImage:'linear-gradient(rgba(0,0,80,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,80,0.03) 1px,transparent 1px)',backgroundSize:'44px 44px',pointerEvents:'none'}}/>
       <div style={{maxWidth:'1380px',margin:'0 auto',position:'relative',zIndex:2}}>
-        <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:G,marginBottom:'0.5rem',fontWeight:700}}>// SECTION 05A</div>
-        <h2 style={{fontFamily:'"Arial Black",sans-serif',fontSize:'clamp(2.5rem,6vw,5rem)',fontWeight:900,textTransform:'uppercase',letterSpacing:'-2px',lineHeight:0.9,color:T1,marginBottom:'4rem'}}>
+        <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:G,marginBottom:'0.5rem',fontWeight:700}}></div>
+        <h2 style={{fontFamily:'"Arial Black",sans-serif',fontSize:'clamp(2.5rem,6vw,5rem)',fontWeight:900,textTransform:'uppercase',letterSpacing:'-2px',lineHeight:0.9,color:T1,marginBottom:'57px'}}>
           AWARDS &<br/><span style={{WebkitTextStroke:`2.5px ${G}`,color:'transparent'}}>ACHIEVEMENTS</span>
         </h2>
         <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:'1rem',marginBottom:'5rem'}} className="section-reveal">
@@ -51,7 +51,7 @@ export default function AchievementsSection() {
         </div>
 
         {/* Area of Interest */}
-        <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:B,marginBottom:'0.5rem',fontWeight:700}}>// SECTION 05B</div>
+        <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:B,marginBottom:'5px',fontWeight:700}}></div>
         <h2 style={{fontFamily:'"Arial Black",sans-serif',fontSize:'clamp(2rem,5vw,4rem)',fontWeight:900,textTransform:'uppercase',letterSpacing:'-2px',lineHeight:0.9,color:T1,marginBottom:'3rem'}}>
           AREA OF<br/><span style={{WebkitTextStroke:`2px ${B}`,color:'transparent'}}>INTEREST</span>
         </h2>
@@ -73,7 +73,7 @@ export default function AchievementsSection() {
         </div>
 
         {/* Education */}
-        <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:G,marginBottom:'0.5rem',fontWeight:700}}>// SECTION 05C</div>
+        <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:G,marginBottom:'0rem',fontWeight:700}}></div>
         <h2 style={{fontFamily:'"Arial Black",sans-serif',fontSize:'clamp(2rem,5vw,4rem)',fontWeight:900,textTransform:'uppercase',letterSpacing:'-2px',lineHeight:0.9,color:T1,marginBottom:'3rem'}}>
           EDUCATION<br/><span style={{WebkitTextStroke:`2px ${B}`,color:'transparent'}}>TIMELINE</span>
         </h2>
