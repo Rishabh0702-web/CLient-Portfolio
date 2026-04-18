@@ -78,33 +78,12 @@ export default function ExperienceSection() {
                 <div style={{fontFamily:'Georgia,serif',fontSize:'12.5px',color:T3,letterSpacing:'0.3px',marginBottom:'1rem',fontStyle:'italic'}}>
                   {e.supervisor} · <span style={{fontStyle:'normal',color:T3}}>{e.supervisorTitle}</span>
                 </div>
-                <p style={{fontFamily:'Georgia,serif',fontSize:'14px',color:T2,marginBottom:'1.2rem',lineHeight:1.6,borderLeft:`2.5px solid ${e.rxnColor}55`,paddingLeft:'14px',fontWeight:500}}>{e.topic}</p>
-                <div style={{display:'flex',flexDirection:'column',gap:'6px'}}>
-                  {e.points.map((pt,j)=>(
-                    <div key={j} style={{display:'flex',gap:'10px',alignItems:'flex-start'}}>
-                      <span style={{color:e.rxnColor,fontFamily:'monospace',fontSize:'10px',marginTop:'2px',flexShrink:0,fontWeight:700}}>→</span>
-                      <span style={{fontFamily:'monospace',fontSize:'12px',color:T2,lineHeight:1.6,fontWeight:500}}>{pt}</span>
-                    </div>
-                  ))}
-                </div>
+                <p style={{fontFamily:'Georgia,serif',fontSize:'14px',color:T2,lineHeight:1.6,borderLeft:`2.5px solid ${e.rxnColor}55`,paddingLeft:'14px',fontWeight:500}}>{e.topic}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Publication callout */}
-        <div style={{...glass,padding:'2rem',display:'grid',gridTemplateColumns:'auto 1fr',gap:'2rem',alignItems:'center'}} className="section-reveal">
-          <div style={{fontFamily:'"Arial Black",sans-serif',fontSize:'3.5rem',fontWeight:900,color:`${G}22`,lineHeight:1,letterSpacing:'-2px'}}>PUB</div>
-          <div>
-            <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'3px',color:G,marginBottom:'6px',fontWeight:700}}>ANGEWANDTE CHEMIE INTERNATIONAL EDITION · 2026 · 65, e23983</div>
-            <p style={{fontFamily:'Georgia,serif',fontSize:'14px',color:T2,lineHeight:1.7,marginBottom:'8px'}}>
-              <em>"Engineering Isoquinoline-derived Directing Template for Distal C5-H Functionalization of Bicyclic Aza-arenes"</em>
-            </p>
-            <div style={{fontFamily:'monospace',fontSize:'11px',color:T3,fontWeight:500}}>
-              A. Mandal, R. Bano, S. Chattopadhyay, R. Banerjee, D. Borah, <span style={{color:G,fontWeight:700}}>N. Gupta</span>, M. Shanmugam, D. Maiti
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

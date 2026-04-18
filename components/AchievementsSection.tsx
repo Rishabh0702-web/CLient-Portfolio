@@ -55,18 +55,20 @@ export default function AchievementsSection() {
         <h2 style={{fontFamily:'"Arial Black",sans-serif',fontSize:'clamp(2rem,5vw,4rem)',fontWeight:900,textTransform:'uppercase',letterSpacing:'-2px',lineHeight:0.9,color:T1,marginBottom:'3rem'}}>
           AREA OF<br/><span style={{WebkitTextStroke:`2px ${B}`,color:'transparent'}}>INTEREST</span>
         </h2>
-        <div style={{...glass,padding:'2.5rem',marginBottom:'5rem',display:'grid',gridTemplateColumns:'1fr 1fr',gap:'2.5rem'}} className="section-reveal">
-          <div style={{display:'flex',gap:'12px',alignItems:'flex-start'}}>
-            <span style={{color:G,fontFamily:'monospace',fontSize:'16px',marginTop:'2px',flexShrink:0,fontWeight:700}}>⬡</span>
-            <p style={{fontFamily:'Georgia,serif',fontSize:'15px',color:T2,lineHeight:1.9}}>
-              Currently working on <span style={{color:G,fontWeight:700}}>COF (Covalent Organic Framework)</span> and its application to C–H activation through organic transformations during my M.Sc. Project work, including computational studies. I aim to enhance my skills in designing complex organic molecules that benefit humankind.
-            </p>
-          </div>
-          <div style={{display:'flex',gap:'12px',alignItems:'flex-start'}}>
-            <span style={{color:B,fontFamily:'monospace',fontSize:'16px',marginTop:'2px',flexShrink:0,fontWeight:700}}>⬡</span>
-            <p style={{fontFamily:'Georgia,serif',fontSize:'15px',color:T2,lineHeight:1.9}}>
-              Want to work with <span style={{color:B,fontWeight:700}}>C–H Activation</span>, biologically active compounds, organic synthesis, and new synthetic techniques using the principles of <span style={{color:G,fontWeight:700}}>green chemistry</span> — including metal-free synthesis and new methods for organic synthesis and their computational studies.
-            </p>
+        <div style={{...glass,padding:'2.5rem',marginBottom:'5rem'}} className="section-reveal">
+          <div style={{display:'flex',flexDirection:'column',gap:'1.2rem'}}>
+            {[
+              'Transition Metal Catalysed Selective C–H Activation',
+              'Covalent Organic Framework',
+              'Asymmetric Synthesis & Catalysis',
+              'Organometallic Catalysis',
+              'Total Synthesis of Complex Natural Product',
+            ].map((item,i)=>(
+              <div key={i} style={{display:'flex',gap:'12px',alignItems:'flex-start'}}>
+                <span style={{color:i%2===0?G:B,fontFamily:'monospace',fontSize:'12px',marginTop:'2px',flexShrink:0,fontWeight:700}}>▪</span>
+                <span style={{fontFamily:'monospace',fontSize:'12px',color:T2,lineHeight:1.6,fontWeight:500}}>{item}</span>
+              </div>
+            ))}
           </div>
         </div>
 
