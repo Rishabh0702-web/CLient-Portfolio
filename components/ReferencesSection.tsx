@@ -42,9 +42,9 @@ export default function ReferencesSection() {
           MENTORS &<br/><span style={{WebkitTextStroke:`2.5px ${G}`,color:'transparent'}}>REFERENCES</span>
         </h2>
 
-        <div style={{display:'flex',flexDirection:'column',gap:'1.2rem',marginBottom:'4rem'}}>
+        <div style={{display:'flex',flexDirection:'column',gap:'1.2rem',marginBottom:'4rem'}} className="section-reveal">
           {REFS.map((r,i)=>(
-            <div key={i} style={{...glass,display:'grid',gridTemplateColumns:'64px 1fr 1fr',overflow:'hidden',transition:'all 0.3s'}}
+            <div key={i} style={{...glass,display:'grid',gridTemplateColumns:'64px 1fr 1fr',overflow:'hidden',transition:'all 0.3s'}} className="slide-up-reveal" style={{animationDelay: `${i*0.1}s`}}
               onMouseEnter={e=>{const el=e.currentTarget as HTMLElement;el.style.transform='translateY(-2px)';el.style.boxShadow=`0 16px 40px ${r.col}18,0 4px 12px rgba(0,0,0,0.05)`;}}
               onMouseLeave={e=>{const el=e.currentTarget as HTMLElement;el.style.transform='translateY(0)';el.style.boxShadow='0 8px 32px rgba(0,0,40,0.07),0 2px 8px rgba(0,0,0,0.04)';}}
             >
@@ -75,7 +75,7 @@ export default function ReferencesSection() {
         </div>
 
         {/* Contact grid */}
-        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'1rem',marginBottom:'4rem'}}>
+        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'1rem',marginBottom:'4rem'}} className="section-reveal">
           {[
             {label:'PERSONAL EMAIL',value:'naitikgupta976@gmail.com',href:'mailto:naitikgupta976@gmail.com',col:G},
             {label:'INSTITUTIONAL EMAIL',value:'ms24chm016@students.vnit.ac.in',href:'mailto:ms24chm016@students.vnit.ac.in',col:B},

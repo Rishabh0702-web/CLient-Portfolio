@@ -34,9 +34,9 @@ export default function AchievementsSection() {
         <h2 style={{fontFamily:'"Arial Black",sans-serif',fontSize:'clamp(2.5rem,6vw,5rem)',fontWeight:900,textTransform:'uppercase',letterSpacing:'-2px',lineHeight:0.9,color:T1,marginBottom:'4rem'}}>
           AWARDS &<br/><span style={{WebkitTextStroke:`2.5px ${G}`,color:'transparent'}}>ACHIEVEMENTS</span>
         </h2>
-        <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:'1rem',marginBottom:'5rem'}}>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:'1rem',marginBottom:'5rem'}} className="section-reveal">
           {AWARDS.map((a,i)=>(
-            <div key={i} style={{...glass,padding:'1.5rem',cursor:'default',transition:'all 0.3s',position:'relative',overflow:'hidden'}}
+            <div key={i} style={{...glass,padding:'1.5rem',cursor:'default',transition:'all 0.3s',position:'relative',overflow:'hidden'}} className="scale-reveal" style={{animationDelay: `${i*0.08}s`}}
               onMouseEnter={e=>{const el=e.currentTarget as HTMLElement;el.style.transform='translateY(-4px)';el.style.boxShadow=`0 16px 40px ${a.col}25,0 4px 12px rgba(0,0,0,0.06)`;}}
               onMouseLeave={e=>{const el=e.currentTarget as HTMLElement;el.style.transform='translateY(0)';el.style.boxShadow='0 8px 32px rgba(0,0,40,0.07),0 2px 8px rgba(0,0,0,0.04)';}}
             >
@@ -55,7 +55,7 @@ export default function AchievementsSection() {
         <h2 style={{fontFamily:'"Arial Black",sans-serif',fontSize:'clamp(2rem,5vw,4rem)',fontWeight:900,textTransform:'uppercase',letterSpacing:'-2px',lineHeight:0.9,color:T1,marginBottom:'3rem'}}>
           AREA OF<br/><span style={{WebkitTextStroke:`2px ${B}`,color:'transparent'}}>INTEREST</span>
         </h2>
-        <div style={{...glass,padding:'2.5rem',marginBottom:'5rem',display:'grid',gridTemplateColumns:'1fr 1fr',gap:'2.5rem'}}>
+        <div style={{...glass,padding:'2.5rem',marginBottom:'5rem',display:'grid',gridTemplateColumns:'1fr 1fr',gap:'2.5rem'}} className="section-reveal">
           <div style={{display:'flex',gap:'12px',alignItems:'flex-start'}}>
             <span style={{color:G,fontFamily:'monospace',fontSize:'16px',marginTop:'2px',flexShrink:0,fontWeight:700}}>⬡</span>
             <p style={{fontFamily:'Georgia,serif',fontSize:'15px',color:T2,lineHeight:1.9}}>
@@ -75,7 +75,7 @@ export default function AchievementsSection() {
         <h2 style={{fontFamily:'"Arial Black",sans-serif',fontSize:'clamp(2rem,5vw,4rem)',fontWeight:900,textTransform:'uppercase',letterSpacing:'-2px',lineHeight:0.9,color:T1,marginBottom:'3rem'}}>
           EDUCATION<br/><span style={{WebkitTextStroke:`2px ${B}`,color:'transparent'}}>TIMELINE</span>
         </h2>
-        <div style={{...glass,overflow:'hidden'}}>
+        <div style={{...glass,overflow:'hidden'}} className="section-reveal">
           <div style={{display:'grid',gridTemplateColumns:'110px 1.2fr 1.6fr 90px 100px',background:`${G}0a`,borderBottom:'1px solid rgba(255,255,255,0.7)',padding:'12px 22px',gap:'14px'}}>
             {['PERIOD','DEGREE','INSTITUTION','SCORE','STATUS'].map(h=>(
               <span key={h} style={{fontFamily:'monospace',fontSize:'9px',letterSpacing:'3px',color:T3,fontWeight:700}}>{h}</span>

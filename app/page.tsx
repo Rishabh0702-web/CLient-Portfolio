@@ -8,6 +8,7 @@ import SkillsSection from '@/components/SkillsSection';
 import ExperienceSection from '@/components/ExperienceSection';
 import AchievementsSection from '@/components/AchievementsSection';
 import ReferencesSection from '@/components/ReferencesSection';
+import AnimatedMoleculeBackground from '@/components/AnimatedMoleculeBackground';
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('home');
@@ -27,10 +28,36 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Add scroll-triggered animations
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px',
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          // Optional: Unobserve after animation to improve performance
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observe all elements with reveal animation classes
+    document.querySelectorAll('.section-reveal, .scale-reveal, .slide-left-reveal, .slide-right-reveal').forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div style={{ background: '#f7f6f2', overflowX: 'hidden' }}>
+    <div style={{ background: '#f7f6f2', overflowX: 'hidden', position: 'relative' }}>
+      <AnimatedMoleculeBackground />
       <Navigation activeSection={activeSection} />
-      <main>
+      <main style={{ position: 'relative', zIndex: 10 }}>
         <HeroSection />
         <AboutSection />
         <SkillsSection />
