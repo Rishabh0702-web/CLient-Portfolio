@@ -19,7 +19,6 @@ const DATA=[
   {label:'PHONE',       value:'+91-7007401684'},
   {label:'EMAIL',       value:'naitikgupta976@gmail.com'},
   {label:'INST. EMAIL', value:'ms24chm016@students.vnit.ac.in'},
-  {label:'PUBLICATION', value:'Angew. Chem. Int. Ed. 2026'},
 ];
 
 export default function AboutSection() {
@@ -42,7 +41,7 @@ export default function AboutSection() {
               <span style={{fontFamily:'monospace',fontSize:'10px',color:T3}}>REF-NG-2024</span>
             </div>
             {DATA.map((d,i)=>(
-              <div key={i} style={{display:'grid',gridTemplateColumns:'42% 58%',borderBottom:'1px solid rgba(0,0,0,0.05)',padding:'13px 22px',background:i%2===0?'rgba(255,255,255,0.3)':'rgba(255,255,255,0.6)'}}>
+              <div key={i} style={{display:'grid',gridTemplateColumns:'42% 58%',borderBottom:i===DATA.length-1?'none':'1px solid rgba(0,0,0,0.05)',padding:i===DATA.length-1?'13px 22px 10px 22px':'13px 22px',background:i%2===0?'rgba(255,255,255,0.3)':'rgba(255,255,255,0.6)'}}>
                 <span style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'2px',color:T3,fontWeight:600}}>{d.label}</span>
                 <span style={{fontFamily:'monospace',fontSize:'12px',color:T1,fontWeight:600}}>{d.value}</span>
               </div>
