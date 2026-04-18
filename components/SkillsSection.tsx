@@ -12,14 +12,6 @@ const glass = {
   borderRadius:'14px',
 } as const;
 
-// Seeded pseudo-random for NMR bars — no hydration mismatch
-const prand = (seed:number) => { const x=Math.sin(seed*9301+49297)*233280; return x-Math.floor(x); };
-const PEAKS=[5,12,18,22,28,35,40,48,55];
-const NMR_BARS=Array.from({length:60},(_,i)=>{
-  const near=PEAKS.some(p=>Math.abs(i-p)<3);
-  return {h:near?Math.max(10,60-Math.min(...PEAKS.map(p=>Math.abs(i-p)))*18):prand(i)*8+2,near};
-});
-
 const COMPUTER=['MS Word','MS Excel','MS PowerPoint','OriginPro','ChemDraw'];
 
 export default function SkillsSection() {
@@ -35,20 +27,7 @@ export default function SkillsSection() {
         </h2>
 
 
-        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'2rem',marginBottom:'3rem'}} className="section-reveal">
-          {/* NMR spectrum */}
-          <div style={{...glass,padding:'1.8rem',lineHeight:'0em',paddingBottom:'0px',paddingRight:'0px'}} className="slide-left-reveal">
-            <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'3px',color:T3,marginBottom:'0rem',fontWeight:700}}></div>
-            <div style={{display:'flex',alignItems:'flex-end',gap:'3px',height:'56px'}}>
-              {NMR_BARS.map(({h,near},i)=>(
-                <div key={i} style={{width:'4px',height:`${h}px`,background:near?G:'rgba(0,0,0,0.12)',borderRadius:'2px 2px 0 0',boxShadow:near?`0 0 6px ${G}55`:undefined,flexShrink:0}}/>
-              ))}
-            </div>
-            <div style={{display:'flex',justifyContent:'space-between',marginTop:'8px',fontFamily:'monospace',fontSize:'9px',color:T3,fontWeight:600,lineHeight:'0em'}}>
-              {['δ 10','δ 8','δ 6','δ 4','δ 2','δ 0'].map(l=><span key={l}>{l}</span>)}
-            </div>
-          </div>
-
+        <div style={{marginBottom:'3rem'}} className="section-reveal">
           {/* Computer skills */}
           <div style={{...glass,padding:'1.8rem'}} className="slide-right-reveal">
             <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'3px',color:B,marginBottom:'1.2rem',fontWeight:700}}>COMPUTER SKILLS</div>
