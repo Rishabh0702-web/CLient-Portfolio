@@ -20,20 +20,6 @@ const NMR_BARS=Array.from({length:60},(_,i)=>{
   return {h:near?Math.max(10,60-Math.min(...PEAKS.map(p=>Math.abs(i-p)))*18):prand(i)*8+2,near};
 });
 
-const SKILLS=[
-  {name:'NMR\nSampling',      pct:95,col:G},
-  {name:'Column\nChrom.',     pct:92,col:G},
-  {name:'TLC',                pct:90,col:G},
-  {name:'UV-Vis\nSpectrosc.', pct:88,col:B},
-  {name:'FT-IR',              pct:88,col:B},
-  {name:'TG-DTA\n/ DSC',      pct:80,col:B},
-  {name:'UV-DRS',             pct:78,col:O},
-  {name:'XRD',                pct:80,col:O},
-  {name:'Sonicator',          pct:85,col:O},
-  {name:'Rotary\nEvap.',      pct:90,col:G},
-  {name:'Org.\nSynthesis',    pct:95,col:G},
-  {name:'Stereosel.\nSynth.', pct:85,col:B},
-];
 const COMPUTER=['MS Word','MS Excel','MS PowerPoint','OriginPro','ChemDraw'];
 
 export default function SkillsSection() {
@@ -47,18 +33,7 @@ export default function SkillsSection() {
           TECHNICAL<br/>
           <span style={{WebkitTextStroke:`2.5px ${B}`,color:'transparent'}}>ARSENAL</span>
         </h2>
-        <p style={{fontFamily:'monospace',fontSize:'12px',color:T3,letterSpacing:'2px',marginBottom:'4rem',fontWeight:600}}>HOVER OVER CELLS · LAB TECHNIQUES ↓</p>
 
-        {/* Hex skill cells */}
-        <div style={{display:'flex',flexWrap:'wrap',gap:'8px',marginBottom:'4rem'}} className="section-reveal">
-          {SKILLS.map((s,i)=>(
-            <div key={i} className="scale-reveal" style={{animationDelay: `${i*0.05}s`, clipPath:'polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)',width:'120px',height:'138px',background:`radial-gradient(circle at 50% 60%,rgba(255,255,255,0.95) 0%,${s.col}14 100%)`,backdropFilter:'blur(12px)',WebkitBackdropFilter:'blur(12px)',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',cursor:'default',transition:'transform 0.3s,filter 0.3s',position:'relative',filter:'drop-shadow(0 4px 12px rgba(0,0,40,0.08))'}}>
-              <span style={{fontFamily:'"Arial Black",sans-serif',fontSize:'23px',fontWeight:900,color:s.col,lineHeight:1,position:'relative',zIndex:1,display:'none'}}></span>
-              <span style={{fontFamily:'monospace',fontSize:'10px',color:s.col,fontWeight:700,position:'relative',zIndex:1,display:'none'}}></span>
-              <span style={{fontFamily:'monospace',fontSize:'12px',color:T2,textAlign:'center',lineHeight:1.3,marginTop:'5px',whiteSpace:'pre-line',position:'relative',zIndex:1,fontWeight:600}}>{s.name}</span>
-            </div>
-          ))}
-        </div>
 
         <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'2rem',marginBottom:'3rem'}} className="section-reveal">
           {/* NMR spectrum */}
