@@ -19,6 +19,8 @@ const DATA=[
   {label:'PHONE',       value:'+91-7007401684'},
   {label:'EMAIL',       value:'naitikgupta976@gmail.com'},
   {label:'INST. EMAIL', value:'ms24chm016@students.vnit.ac.in'},
+  {label:'', value:''},
+  {label:'', value:''},
 ];
 
 export default function AboutSection() {
@@ -53,7 +55,7 @@ export default function AboutSection() {
 
 
             {/* Skills grid */}
-            <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'1rem'}}>
+            <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'1rem',borderRadius:'18px'}}>
               <div style={{...glass,padding:'1.5rem',paddingRight:'20px'}}>
                 <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'2px',color:B,marginBottom:'0.8rem',fontWeight:700}}>COMPUTER SKILLS</div>
                 {['MS Word','MS Excel','MS PowerPoint','OriginPro','ChemDraw'].map(s=>(
@@ -64,7 +66,7 @@ export default function AboutSection() {
                 ))}
               </div>
               <div style={{...glass,padding:'14px 5px 15px 5px',borderRadius:'55px',border:'1px solid rgba(255,255,255,0.92)',fontStyle:'italic'}}>
-                <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'2px',color:O,marginBottom:'0.8rem',fontWeight:700}}>LANGUAGES</div>
+                <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'2px',color:O,marginBottom:'0.8rem',fontWeight:700,paddingBottom:'10px'}}>LANGUAGES</div>
                 {['English (Fluent)','Hindi (Native)'].map(s=>(
                   <div key={s} style={{display:'flex',alignItems:'center',gap:'8px',marginBottom:'5px'}}>
                     <span style={{width:'5px',height:'5px',borderRadius:'50%',background:O,flexShrink:0,display:'inline-block'}}/>
