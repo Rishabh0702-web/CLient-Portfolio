@@ -65,8 +65,8 @@ export default function SkillsSection() {
               onMouseEnter={e=>{(e.currentTarget as HTMLElement).style.transform='scale(1.13)';(e.currentTarget as HTMLElement).style.filter='drop-shadow(0 8px 24px rgba(0,0,40,0.14))';}}
               onMouseLeave={e=>{(e.currentTarget as HTMLElement).style.transform='scale(1)';(e.currentTarget as HTMLElement).style.filter='drop-shadow(0 4px 12px rgba(0,0,40,0.08))';}}
             >
-              <span style={{fontFamily:'"Arial Black",sans-serif',fontSize:'23px',fontWeight:900,color:s.col,lineHeight:1,position:'relative',zIndex:1}}>{s.pct}</span>
-              <span style={{fontFamily:'monospace',fontSize:'10px',color:s.col,fontWeight:700,position:'relative',zIndex:1}}>%</span>
+              <span style={{fontFamily:'"Arial Black",sans-serif',fontSize:'23px',fontWeight:900,color:s.col,lineHeight:1,position:'relative',zIndex:1}}></span>
+              <span style={{fontFamily:'monospace',fontSize:'10px',color:s.col,fontWeight:700,position:'relative',zIndex:1}}></span>
               <span style={{fontFamily:'monospace',fontSize:'12px',color:T2,textAlign:'center',lineHeight:1.3,marginTop:'5px',whiteSpace:'pre-line',position:'relative',zIndex:1,fontWeight:600}}>{s.name}</span>
             </div>
           ))}
@@ -81,7 +81,7 @@ export default function SkillsSection() {
                 <div key={i} style={{width:'4px',height:`${h}px`,background:near?G:'rgba(0,0,0,0.12)',borderRadius:'2px 2px 0 0',boxShadow:near?`0 0 6px ${G}55`:undefined,flexShrink:0}}/>
               ))}
             </div>
-            <div style={{display:'flex',justifyContent:'space-between',marginTop:'8px',fontFamily:'monospace',fontSize:'9px',color:T3,fontWeight:600}}>
+            <div style={{display:'flex',justifyContent:'space-between',marginTop:'8px',fontFamily:'monospace',fontSize:'9px',color:T3,fontWeight:600,lineHeight:'0em'}}>
               {['δ 10','δ 8','δ 6','δ 4','δ 2','δ 0'].map(l=><span key={l}>{l}</span>)}
             </div>
           </div>
