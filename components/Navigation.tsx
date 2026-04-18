@@ -39,7 +39,7 @@ export default function Navigation({activeSection}:{activeSection:string}) {
           <span style={{fontFamily:'monospace',fontSize:'13px',fontWeight:700,color:G,letterSpacing:'3px'}}>N·G</span>
         </Link>
 
-        <div style={{display:'flex',gap:'2.5rem',alignItems:'center'}}>
+        <div style={{display:'flex',gap:'0px',alignItems:'center'}}>
           {NAV.map(item=>(
             <Link key={item.id} href={item.href} style={{textDecoration:'none',position:'relative'}}>
               <span style={{

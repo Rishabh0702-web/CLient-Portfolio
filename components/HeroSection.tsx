@@ -145,7 +145,7 @@ export default function HeroSection() {
       </div>
 
       {/* TICKER */}
-      <div style={{position:'absolute',bottom:0,left:0,right:0,overflow:'hidden',borderTop:'1px solid rgba(0,0,0,0.08)',background:'rgba(0,0,0,0.03)',padding:'10px 0',zIndex:4}}>
+      <div style={{position:'absolute',bottom:0,left:0,right:0,overflow:'hidden',borderTop:'1px solid rgba(0,0,0,0.08)',background:'rgba(0,0,0,0.03)',paddingTop:'0px',paddingBottom:'58px',zIndex:4}}>
         <div style={{display:'flex',gap:'4rem',animation:'ticker 22s linear infinite',width:'max-content',fontFamily:'monospace',fontSize:'11px',color:'#aaaabb',letterSpacing:'1px'}}>
           {[...FORMULAS,...FORMULAS].map((f,i)=>(
             <span key={i} style={{whiteSpace:'nowrap'}}>▸ {f}</span>
