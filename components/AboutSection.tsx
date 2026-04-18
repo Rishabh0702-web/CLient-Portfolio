@@ -30,8 +30,8 @@ export default function AboutSection() {
 
       <div style={{maxWidth:'1380px',margin:'0 auto',position:'relative',zIndex:2}}>
         <div style={{fontFamily:'monospace',fontSize:'11px',letterSpacing:'5px',color:G,marginBottom:'15px',fontWeight:700}}>// SECTION 02</div>
-        <h2 style={{fontFamily:'"Arial Black",sans-serif',fontSize:'clamp(2.5rem,6vw,5rem)',fontWeight:900,textTransform:'uppercase',letterSpacing:'-2px',lineHeight:0.9,color:T1,marginBottom:'4rem'}}>
-          ABOUT<br/><span style={{WebkitTextStroke:'2.5px rgba(0,119,68,0.8)',color:'transparent'}}> SCIENTIST</span>
+        <h2 style={{fontFamily:'"Arial Black",sans-serif',fontSize:'clamp(2.5rem,6vw,5rem)',fontWeight:900,textTransform:'uppercase',letterSpacing:'-2px',lineHeight:0.9,color:T1,marginBottom:'32px'}}>
+          ABOUT<br/><span style={{WebkitTextStroke:'2.5px rgba(0,119,68,0.8)',color:'transparent'}}></span>
         </h2>
 
         <div style={{display:'grid',gridTemplateColumns:'1fr 1.3fr',gap:'4rem',alignItems:'start'}}>
@@ -54,7 +54,7 @@ export default function AboutSection() {
             {/* Profile */}
             <div style={{...glass,padding:'2rem'}}>
               <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'3px',color:G,marginBottom:'1rem',fontWeight:700}}>PROFILE</div>
-              <p style={{fontSize:'15.5px',lineHeight:1.9,color:T2,fontFamily:'Georgia,serif',marginBottom:'1.2rem'}}>
+              <p style={{fontSize:'15.5px',lineHeight:1.9,color:T2,fontFamily:'inherit',marginBottom:'13px'}}>
                 Driven by a passion for innovation and scientific discovery, I am actively seeking opportunities to apply my knowledge and skills in <span style={{color:B,fontWeight:700}}>organic synthesis</span> to contribute to groundbreaking research or industrial projects.
               </p>
               <p style={{fontSize:'15.5px',lineHeight:1.9,color:T2,fontFamily:'Georgia,serif'}}>
@@ -64,7 +64,7 @@ export default function AboutSection() {
 
             {/* Skills grid */}
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'1rem'}}>
-              <div style={{...glass,padding:'1.5rem'}}>
+              <div style={{...glass,padding:'1.5rem',paddingRight:'20px'}}>
                 <div style={{fontFamily:'monospace',fontSize:'10px',letterSpacing:'2px',color:B,marginBottom:'0.8rem',fontWeight:700}}>COMPUTER SKILLS</div>
                 {['MS Word','MS Excel','MS PowerPoint','OriginPro','ChemDraw'].map(s=>(
                   <div key={s} style={{display:'flex',alignItems:'center',gap:'8px',marginBottom:'5px'}}>
