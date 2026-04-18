@@ -35,7 +35,7 @@ export default function AboutSection() {
           ABOUT<br/><span style={{WebkitTextStroke:'2.5px rgba(0,119,68,0.8)',color:'transparent'}}></span>
         </h2>
 
-        <div style={{display:'grid',gridTemplateColumns:'1fr 1.3fr',gap:'4rem',alignItems:'start',}} className="section-reveal">
+        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'4rem',alignItems:'start',}} className="section-reveal">
           {/* Specimen card */}
           <div style={{...glass,overflow:'hidden'}} className="slide-left-reveal">
             <div style={{background:`linear-gradient(90deg,${G}18,${B}10)`,borderBottom:'1px solid rgba(255,255,255,0.6)',padding:'14px 22px',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
