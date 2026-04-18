@@ -35,7 +35,7 @@ export default function AboutSection() {
           ABOUT<br/><span style={{WebkitTextStroke:'2.5px rgba(0,119,68,0.8)',color:'transparent'}}></span>
         </h2>
 
-        <div style={{display:'grid',gridTemplateColumns:'1fr 1.3fr',gap:'4rem',alignItems:'start',}} className="section-reveal">
+        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'4rem',alignItems:'start',}} className="section-reveal">
           {/* Specimen card */}
           <div style={{...glass,overflow:'hidden'}} className="slide-left-reveal">
             <div style={{background:`linear-gradient(90deg,${G}18,${B}10)`,borderBottom:'1px solid rgba(255,255,255,0.6)',padding:'14px 22px',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
@@ -53,6 +53,21 @@ export default function AboutSection() {
           {/* Bio + skills */}
           <div style={{display:'flex',flexDirection:'column',gap:'2rem'}} className="slide-right-reveal">
 
+            {/* Professional Bio */}
+            <div style={{...glass,padding:'2rem',lineHeight:1.8}}>
+              <p style={{fontFamily:'Georgia,serif',fontSize:'14px',color:T2,marginBottom:'1rem'}}>
+                I am <span style={{fontWeight:700,color:G}}>Naitik Gupta</span>, currently pursuing my <span style={{fontWeight:700}}>Master of Science (M.Sc.) in Chemistry</span> at <span style={{fontWeight:700,color:G}}>Visvesvaraya National Institute of Technology (VNIT), Nagpur</span>. I am working under the guidance of <span style={{fontWeight:700}}>Dr. Umesh Pratap</span>, where my thesis focuses on the synthesis of heterogeneous catalysts (COF) for C–N coupling reactions.
+              </p>
+              <p style={{fontFamily:'Georgia,serif',fontSize:'14px',color:T2,marginBottom:'1rem'}}>
+                My passion for chemical research stems from a deep curiosity about phenomena at the atomic and molecular level, particularly in <span style={{fontWeight:700,color:B}}>synthetic and catalytic chemistry</span>. I completed my <span style={{fontWeight:700}}>B.Sc. in Life Sciences</span> from <span style={{fontWeight:700,color:B}}>Hansraj College, University of Delhi</span> (2020–2023).
+              </p>
+              <p style={{fontFamily:'Georgia,serif',fontSize:'14px',color:T2,marginBottom:'1rem'}}>
+                My research expertise encompasses <span style={{fontWeight:700,color:O}}>transition-metal-catalyzed reactions</span>, <span style={{fontWeight:700}}>C–H bond activation</span>, and the development of novel synthetic methodologies. I am particularly interested in pushing the boundaries of organic synthesis and catalysis.
+              </p>
+              <p style={{fontFamily:'Georgia,serif',fontSize:'14px',color:T2}}>
+                I aspire to pursue a <span style={{fontWeight:700,color:G}}>Ph.D. in Chemistry</span>, where I can deepen my understanding, contribute to impactful research, and address challenging problems in chemical science.
+              </p>
+            </div>
 
             {/* Skills grid */}
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'1rem',borderRadius:'23px'}}>
