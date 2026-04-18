@@ -147,13 +147,18 @@ export default function AboutSection() {
             <TiltCard style={{ padding: '2rem', display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '2rem', alignItems: 'center', borderLeft: `3px solid ${G}`, animation: 'glowPulse 4s ease-in-out infinite' }} className="shimmer-surface">
               <div style={{ fontFamily: '"Arial Black",sans-serif', fontSize: '3.5rem', fontWeight: 900, color: G, lineHeight: 1, letterSpacing: '-2px', opacity: 0.25, filter: `drop-shadow(0 0 16px ${G})` }}>PUB</div>
               <div>
-                <div style={{ fontFamily: 'monospace', fontSize: '10px', letterSpacing: '3px', color: G, marginBottom: '6px', fontWeight: 700 }}>ANGEWANDTE CHEMIE INTERNATIONAL EDITION · 2026 · 65, e23983</div>
+                <div style={{ fontFamily: 'monospace', fontSize: '10px', letterSpacing: '3px', color: G, marginBottom: '6px' }}>
+                  <em>Angew. Chem. Int. Ed.</em> <strong>2026</strong>, <em>65</em>, e23983.
+                </div>
                 <p style={{ fontFamily: 'Georgia,serif', fontSize: '14px', color: T2, lineHeight: 1.7, marginBottom: '8px' }}>
                   <em>"Engineering Isoquinoline-derived Directing Template for Distal C5-H Functionalization of Bicyclic Aza-arenes"</em>
                 </p>
-                <div style={{ fontFamily: 'monospace', fontSize: '11px', color: T3, fontWeight: 500 }}>
+                <div style={{ fontFamily: 'monospace', fontSize: '11px', color: T3, fontWeight: 500, marginBottom: '12px' }}>
                   A. Mandal, R. Bano, S. Chattopadhyay, R. Banerjee, D. Borah, <span style={{ color: G, fontWeight: 700 }}>N. Gupta</span>, M. Shanmugam, D. Maiti
                 </div>
+                <a href="https://doi.org/10.1002/anie.202523983" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'monospace', fontSize: '10px', fontWeight: 700, letterSpacing: '1px', padding: '6px 12px', background: `${G}15`, color: G, border: `1px solid ${G}44`, borderRadius: '4px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', transition: 'all 0.2s' }}>
+                  ↗ READ ARTICLE
+                </a>
               </div>
             </TiltCard>
           </div>
